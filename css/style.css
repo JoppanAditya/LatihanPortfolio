@@ -7,12 +7,12 @@
 .jumbotron {
   padding-top: 9rem;
   background-color: #e2edff;
-  /* background-image: url(../img/header-bg.jpg);
+  background-image: url(../img/header-bg.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: 0 -100px;
-  color: #eaeaea; */
+  color: #eaeaea;
 }
 
 /* Projects */
