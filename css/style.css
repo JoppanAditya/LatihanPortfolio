@@ -1,0 +1,32 @@
+/* Jumbotron */
+.jumbotron {
+  padding-top: 9rem;
+  background-color: #e2edff;
+  background-image: url(../img/header-bg.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 0 -200px;
+  color: #eaeaea;
+}
+
+.jumbotron .container {
+  overflow: hidden;
+}
+
+.jumbotron h1,
+.jumbotron p {
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Projects */
+.projects {
+  background-color: #e2edff;
+}
+
+section {
+  scroll-margin-top: 5rem;
+}
+section.about {
+  scroll-margin-top: 20rem;
+}
