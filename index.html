@@ -21,28 +21,50 @@
   </head>
   <body id="home" id="my-scrollbar">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark navTran fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navTran">
       <div class="container">
-        <img src="img/logo1.png" alt="Logo Joppan" height="33" class="d-inline-block align-text-center">
-        <a class="navbar-brand ms-3 fs-4" href="#">
+        <a class="navbar-brand page-scroll fs-5" href="#home">
+          <img src="img/logo1.png" alt="Logo Joppan" height="25" class="d-inline-block align-text-top me-2">
           Joppan Aditya
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              <a class="nav-link active page-scroll" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About Me</a>
+              <a class="nav-link page-about" href="#about">About Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
+              <a class="nav-link page-scroll" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact Me</a>
+              <a class="nav-link page-contact" href="#contact">Contact Me</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link link-light" href="https://github.com/JoppanAditya" target="blank">
+                <i class="bi bi-github"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="https://instagram.com/jodesignn_" target="blank">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="https://www.youtube.com/channel/UCkjKAXB_jHF4cGEulmul7XQ" target="blank">
+                <i class="bi bi-youtube"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="https://jodsgn.blogspot.com/" target="blank">
+                <i class="bi bi-globe2"></i>
+              </a>
             </li>
           </ul>
         </div>
@@ -73,7 +95,7 @@
             <h2>About Me</h2>
           </div>
         </div>
-        <div class="row justify-content-center fs-5 text-center">
+        <div class="row justify-content-center  text-center">
           <div class="col-md-5" data-aos="fade-right">
             <p class="pKiri">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, nihil earum? Voluptatum natus aut neque fugiat quos minima! Optio earum asperiores magni repudiandae ipsa ipsum, veritatis temporibus libero. Nostrum, hic.</p>
           </div>
@@ -219,66 +241,20 @@
     </footer>
     <!-- Akhir Footer -->
 
+    <!-- Bootsrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
-    <script>
-    var navbar = document.querySelector("nav");
-    window.addEventListener("scroll",function(){
-      if (window.pageYOffset > 50){
-        navbar.classList.add('bg-primary', 'shadow-sm');          
-        navbar.classList.remove('navTran');          
-      }else{
-        navbar.classList.remove('bg-primary', 'shadow-sm');
-        navbar.classList.add('navTran');  
-      };
-    });
-    </script>
-
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        once: true,
-        duration: 1000,
-      });
-    </script>
 
+    <!-- Contact Form -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/TextPlugin.min.js"></script>
-    <script>
-      gsap.registerPlugin(TextPlugin);
-      gsap.to('.display-3', {duration:1.5, delay: 1, text: 'Gede Jovan Tiyo Aditya', ease: 'none'})
-      gsap.to('.lead', {duration:3, delay: 3, text: 'Student | Web Developer | Designer', ease: 'none'})
-      gsap.from('.jumbotron img', {duration: 1, opacity: 0})
-      gsap.from('.navbar', {duration: 1, y: '-100%', opacity: 0})
-    </script>
-  
-    <script>
-      const scriptURL = "https://script.google.com/macros/s/AKfycbw-mjTEoBvSON-av80gkOf9Bn4THbWHDt_QZ3mC9jhuBx2FlSoOoDbujRY3uWNCNfGd/exec";
-      const form = document.forms["contact-form"];
-      const btnKirim = document.querySelector('.btn-kirim');
-      const btnLoading = document.querySelector('.btn-loading');
-      const myAlert = document.querySelector('.my-alert');
 
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        // ketika tombol submit diklik
-        // tampilkan tombol loading, hilangkan tombol kirim
-        btnLoading.classList.toggle('d-none');
-        btnKirim.classList.toggle('d-none');
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-          .then((response) => {
-            // tampilkan tombol kirim, hilangkan tombol loading
-            btnLoading.classList.toggle('d-none');
-            btnKirim.classList.toggle('d-none');
-            // tampilkan alert
-            myAlert.classList.toggle('d-none');
-            // reset formnya
-            form.reset();
-            console.log('Success!', response);
-          })
-          .catch((error) => console.error('Error!', error.message));
-      });
-    </script>
+    <!-- My Js -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/script.js"></script>
 
   </body>
 </html>

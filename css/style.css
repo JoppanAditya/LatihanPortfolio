@@ -4,7 +4,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, rgba(33,37,41,.15), rgba(33,37,41,0));
+  background-image: linear-gradient(to bottom, rgba(33,37,41,.1), rgba(33,37,41,0));
   position: absolute;
   top: 0;
   right: 0;
@@ -26,11 +26,4 @@
 /* Projects */
 .projects {
   background-color: #e2edff;
-}
-
-section {
-  scroll-margin-top: 5rem;
-}
-section.about {
-  scroll-margin-top: 20rem;
 }
