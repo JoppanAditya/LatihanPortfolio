@@ -21,10 +21,10 @@
   </head>
   <body id="home" id="my-scrollbar">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark navTran fixed-top fs-5">
+    <nav class="navbar navbar-expand-lg navbar-dark navTran fixed-top">
       <div class="container">
         <img src="img/logo1.png" alt="Logo Joppan" height="33" class="d-inline-block align-text-center">
-        <a class="navbar-brand ms-3" href="#">
+        <a class="navbar-brand ms-3 fs-4" href="#">
           Joppan Aditya
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,10 +75,10 @@
         </div>
         <div class="row justify-content-center fs-5 text-center">
           <div class="col-md-5" data-aos="fade-right">
-            <p class="pKiri">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores ad saepe ex nostrum ut vel dolorum molestias culpa sed sequi?</p>
+            <p class="pKiri">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, nihil earum? Voluptatum natus aut neque fugiat quos minima! Optio earum asperiores magni repudiandae ipsa ipsum, veritatis temporibus libero. Nostrum, hic.</p>
           </div>
           <div class="col-md-5" data-aos="fade-left" data-aos-delay="200">
-            <p class="pKanan">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis cupiditate, illum culpa natus ea eum quod consequatur blanditiis quo, error, nihil doloribus beatae asperiores. Assumenda.</p>
+            <p class="pKanan">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit iusto aliquid accusantium repellendus, eveniet sed fugit dolores, reprehenderit, maxime blanditiis harum adipisci odio debitis temporibus consequatur minima officiis repellat nisi recusandae consectetur non delectus tempora saepe dignissimos. Voluptatibus dicta rem quos, dolore, illo ut tenetur accusantium voluptas tempore, quaerat nihil.</p>
           </div>
         </div>
       </div>
@@ -103,32 +103,50 @@
         <div class="row">
           <div class="col-lg-4 mb-3" data-aos="flip-left" data-aos-delay="200">
             <div class="card">
-              <img src="img/1.jpg" class="card-img img-thumbnail" alt="Project 1" />
+              <img src="img/1.jpg" class="card-img" alt="Project 1" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 mb-3" data-aos="flip-left" data-aos-delay="400">
             <div class="card">
-              <img src="img/2.jpg" class="card-img-top img-thumbnail" alt="Project 2" />
+              <img src="img/2.jpg" class="card-img-top" alt="Project 2" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 mb-3" data-aos="flip-left" data-aos-delay="600">
             <div class="card">
-              <img src="img/3.jpg" class="card-img-top img-thumbnail" alt="Project 3" />
+              <img src="img/3.jpg" class="card-img-top" alt="Project 3" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 mb-3" data-aos="flip-right" data-aos-delay="600">
             <div class="card">
-              <img src="img/4.jpg" class="card-img-top img-thumbnail" alt="Project 4" />
+              <img src="img/4.jpg" class="card-img-top" alt="Project 4" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 mb-3" data-aos="flip-right" data-aos-delay="400">
             <div class="card">
-              <img src="img/5.jpg" class="card-img-top img-thumbnail" alt="Project 5" />
+              <img src="img/5.jpg" class="card-img-top" alt="Project 5" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 mb-3" data-aos="flip-down" data-aos-delay="200">
             <div class="card">
-              <img src="img/6.jpg" class="card-img-top img-thumbnail" alt="Project 6" />
+              <img src="img/6.jpg" class="card-img-top" alt="Project 6" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -208,8 +226,10 @@
     window.addEventListener("scroll",function(){
       if (window.pageYOffset > 50){
         navbar.classList.add('bg-primary', 'shadow-sm');          
+        navbar.classList.remove('navTran');          
       }else{
         navbar.classList.remove('bg-primary', 'shadow-sm');
+        navbar.classList.add('navTran');  
       };
     });
     </script>
@@ -226,8 +246,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/TextPlugin.min.js"></script>
     <script>
       gsap.registerPlugin(TextPlugin);
-      gsap.to('.display-3', {duration:1.5, delay: 1, text: 'Gede Jovan Tiyo Aditya'})
-      gsap.to('.lead', {duration:3, delay: 2.5, text: 'Student | Web Developers | Designer', ease: 'none'})
+      gsap.to('.display-3', {duration:1.5, delay: 1, text: 'Gede Jovan Tiyo Aditya', ease: 'none'})
+      gsap.to('.lead', {duration:3, delay: 3, text: 'Student | Web Developer | Designer', ease: 'none'})
       gsap.from('.jumbotron img', {duration: 1, opacity: 0})
       gsap.from('.navbar', {duration: 1, y: '-100%', opacity: 0})
     </script>
