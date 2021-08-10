@@ -37,10 +37,10 @@ var navbar = document.querySelector("nav");
 window.addEventListener("scroll",function(){
   if (window.pageYOffset > 0){
 	navbar.classList.add('bg-primary', 'shadow-sm');          
-	navbar.classList.remove('navTran');          
+	// navbar.classList.remove('navTran');          
   }else{
 	navbar.classList.remove('bg-primary', 'shadow-sm');
-	navbar.classList.add('navTran');  
+	// navbar.classList.add('navTran');  
   };
 });
 
