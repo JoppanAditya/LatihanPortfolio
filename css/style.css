@@ -1,15 +1,11 @@
 /* Navbar */
-/* .navTran ::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to bottom, rgba(33,37,41,.1), rgba(33,37,41,0));
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
-} */
+.navbar-brand a {
+  margin: 20px auto;
+}
+
+.navSoc {
+  display: none;
+}
 
 /* Jumbotron */
 .jumbotron {
@@ -26,4 +22,27 @@
 /* Projects */
 .projects {
   background-color: #e2edff;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 992px) {
+  .my-navbar {
+    background-color: #1266F1 !important;
+	}
+}
+
+@media only screen and (min-width:1200px){
+  .navMain .nav-link:hover::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid #fff;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+  }  
+  .nav-item > .nav-link {
+    padding: 8px 15px !important;
+		display: block !important;
+  }  
 }

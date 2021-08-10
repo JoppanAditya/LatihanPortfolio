@@ -32,15 +32,13 @@ $(function(){
 	});
 });
 
-// Tranparent Navbar
+// Transparent Navbar
 var navbar = document.querySelector("nav");
 window.addEventListener("scroll",function(){
-  if (window.pageYOffset > 0){
-	navbar.classList.add('bg-primary', 'shadow-sm');          
-	// navbar.classList.remove('navTran');          
+  if (window.pageYOffset > 40){
+	navbar.classList.add('bg-primary', 'shadow-sm');                    
   }else{
 	navbar.classList.remove('bg-primary', 'shadow-sm');
-	// navbar.classList.add('navTran');  
   };
 });
 
